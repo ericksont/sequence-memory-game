@@ -32,20 +32,21 @@ let createColorElement = (color) => {
 }
 
 let lightColor = (element, number) => {
-    number = number * 500;
+    number = number * 50;
     setTimeout(()=>{
         element.classList.add('selected')
     }, number - 250);
     setTimeout(()=>{
         element.classList.remove('selected')
-    })
+    }, number + 250)
 }
 
 let checkOrder = () => {
     for(let i in clickedOrder){
-        if(clickedOrder[i] !== order[i])
+        if(clickedOrder[i] !== order[i]) {
             gameOver(); 
             break;
+        }
     }
     if(clickedOrder.length == order.length){
         alert(`Pontuação; ${score}\nAcertou! Iniciando próximo level.`);
