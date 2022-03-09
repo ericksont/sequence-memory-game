@@ -1,2 +1,2 @@
-# dio-desafio-jogo-de-memoria-genius
+# DIO Desafio - Jogo da Memoria Genius
 Desenvolvendo um jogo de memória no estilo Genius para desafio no DIO
