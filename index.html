@@ -1,12 +1,86 @@
-<!DOCTYPE html>
-<html lang="pt">
+
+<!doctype html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=deveice-width, initial-scale=1.0">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Erickson Tavares">
+        
+        <title> Memory Game </title>
+
+        <link href="./assets/bootstrap-5.0.2/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" >
+
         <link rel="stylesheet" href="./style.css">
+
     </head>
-    <body>
-        <div class="main-game">
+    <body class="bg-light">
+
+        <main >
+
+            <div class="row">
+                <div class="col-3">
+                    <div class="container">
+                        <a href="/" class="align-items-center link-dark text-decoration-none">
+                            <i class="fa-solid fa-colon" class="blue"></i>
+                            <i class="fa-solid fa-colon" class="blue"></i>
+                            <span class="fs-4">Memory Game</span>
+                        </a>
+
+                        <hr>
+                        <ul class="nav nav-pills flex-column">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active" aria-current="page">
+                                    <i class="fa-thin fa-egg"></i>
+                                    Easy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link link-dark">
+                                    <i class="fa-thin fa-hand"></i>
+                                    Medium
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link link-dark">
+                                    <i class="fa-thin fa-face-hand-peeking"></i>
+                                    Hard
+                                </a>
+                            </li>
+                        </ul>
+
+                        <hr>
+                        <div class="list-group list-group-flush border-bottom scrollarea">
+                            <a href="#" class="list-group-item list-group-item-action py-3 lh-tight">
+                                <div class="d-flex w-100 align-items-center justify-content-between">
+                                    <strong class="mb-1">Erickson Tavares</strong>
+                                    <label>1º</label>
+                                </div>
+                                <div class="col-10 mb-1 small">Score: <b> 8 Pts</b> </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-9 p-3">
+                    <div class="bg-secondary p-5 rounded">
+                        <h1>MEMORY GAME</h1>
+                        <p class="lead">Test your ability to memorize on three different levels and make your mark in our ranking.</p>
+                        <p class="lead">Have a lot of fun.</p>
+                        <a class="btn btn-lg btn-primary" href="/docs/5.0/components/navbar/" role="button">View navbar docs »</a>
+
+                        <input type="text" id="name" class="form-control" placeholder="Your Name" />
+                    </div>
+                    
+                </div>
+            </div>
+
+        </main>
+
+        
+
+        <div class="main-game" style="display:none;">
             <div class="genius">
                 <div class="green"></div>
                 <div class="red"></div>
@@ -14,6 +88,9 @@
                 <div class="blue"></div>
             </div>
         </div>
+
+        
+        <script src="./assets/bootstrap-5.0.2/bootstrap.bundle.js"></script>
         <script src="./script.js"></script>
     </body>
 </html>

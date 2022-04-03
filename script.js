@@ -78,7 +78,7 @@ let gameOver = () => {
 }
 
 let playGame = () => {
-    alert("Bem Vindo ao Jogo!");
+    //alert("Bem Vindo ao Jogo!");
     score = 0;
     nextLevel();
 }
