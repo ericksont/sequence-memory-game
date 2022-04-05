@@ -1,0 +1,14 @@
+{
+    "EASY": [{
+        "name": "Erickson",
+        "score": 10
+    }],
+    "MEDIUM": [{
+        "name": "Erickson 02",
+        "score": 10
+    },{
+        "name": "Erickson 02",
+        "score": 10
+    }],
+    "HARD" : []
+}

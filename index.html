@@ -32,19 +32,19 @@
                         <hr>
                         <ul class="nav nav-pills flex-column">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active" aria-current="page">
+                                <a id="menu-easy" href="javascript:void(0)" class="nav-link active" >
                                     <i class="fa-thin fa-egg"></i>
                                     Easy
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link link-dark">
+                                <a id="menu-medium" href="javascript:void(0)" class="nav-link link-dark">
                                     <i class="fa-thin fa-hand"></i>
                                     Medium
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="nav-link link-dark">
+                                <a id="menu-hard" href="javascript:void(0)" class="nav-link link-dark">
                                     <i class="fa-thin fa-face-hand-peeking"></i>
                                     Hard
                                 </a>
@@ -64,13 +64,19 @@
                     </div>
                 </div>
                 <div class="col-9 p-3">
-                    <div class="bg-secondary p-5 rounded">
+                    <div class="p-5 rounded">
                         <h1>MEMORY GAME</h1>
                         <p class="lead">Test your ability to memorize on three different levels and make your mark in our ranking.</p>
                         <p class="lead">Have a lot of fun.</p>
-                        <a class="btn btn-lg btn-primary" href="/docs/5.0/components/navbar/" role="button">View navbar docs »</a>
 
-                        <input type="text" id="name" class="form-control" placeholder="Your Name" />
+                        <input type="text" id="name" class="form-control" placeholder="Put Your Name*" />
+
+                        <div class="row">
+                            <div class="col-12 text-center m-5">
+                                <a id="start-game" class="btn btn-lg btn-primary" href="javascript:void(0)" role="button" > Start Game </a>
+                            </div>
+                        </div>
+                        
                     </div>
                     
                 </div>
@@ -89,8 +95,12 @@
             </div>
         </div>
 
-        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="./assets/bootstrap-5.0.2/bootstrap.bundle.js"></script>
+        
+        <script src="./js/Menu.js"></script>
+        <script src="./js/MemoryGame.js"></script>
+
         <script src="./script.js"></script>
     </body>
 </html>
