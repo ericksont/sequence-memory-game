@@ -6,11 +6,11 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/ericksont/sequence-memory-game?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/ericksont/sequence-memory-game?style=for-the-badge)
 
-Desenvolvendo um jogo de memória no estilo Genius para desafio no DIO
+> Memory game where the player needs to remember a sequence of colors.
 
+## 💻 Requirements
 
-process...
+Before starting, make sure you meet the requirements
+* Node v16.14.0
+* NPM v8.4.1
 
-Start inner folder serverjs, install the dependence npm install
-
-and so "node index.js"
