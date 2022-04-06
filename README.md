@@ -7,3 +7,10 @@
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/ericksont/sequence-memory-game?style=for-the-badge)
 
 Desenvolvendo um jogo de memória no estilo Genius para desafio no DIO
+
+
+process...
+
+Start inner folder serverjs, install the dependence npm install
+
+and so "node index.js"

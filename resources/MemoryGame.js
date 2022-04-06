@@ -6,11 +6,19 @@ class MemoryGame {
     constructor(){
         this.level = "EASY";
         this.status = "NOT_STARTED";
+        this.readPositions();
+    }
+
+    readPositions(lvl = "EASY"){
+        $.get("http://localhost:3000/getJson/");
+        
     }
 
     start(){
         
     }
+
+
 
 }
 
