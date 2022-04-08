@@ -10,20 +10,21 @@ class MemoryGame {
     start(level = "EASY"){
         this.level = level;
         
-        // -- chek if the na is loaded in localstorage
-        // -- if true check if they need change
-
         if(this.status === "STARTED"){
             //$.confirm();
             // and go to homepage
-        } else {
-            menu.acivateMenu();
-            objScore.readPositions()
-        }        
+        } else loadStartPage()
+                
+    }
+
+    loadStartPage(){
+        // -- chek if the na is loaded in localstorage
+        // -- if true check if they need change
+        menu.acivateMenu();
+        objScore.readPositions()
     }
 
     play(){
-        
         
         // check if exist a name player
 
