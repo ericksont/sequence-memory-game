@@ -3,32 +3,62 @@ class MemoryGame {
     level = "EASY"; // EASY, MEDIUM, HARD
     status = "NOT_STARTED"; // STARTED, NOT_STARTED
 
+    cards = ["blue","red", "green", "yellow", "purple", "orange","pink","gray","cyan"];
+
+    sequence = [];
+
+    menu = new Menu(this);
+    player = new Player(this);
+    score = new Score(this);
+    board = new Board(this);
+
     constructor(){
-        objScore.readPositions();
+        this.start();
     }
 
     start(level = "EASY"){
         this.level = level;
-        
         if(this.status === "STARTED"){
-            //$.confirm();
-            // and go to homepage
-        } else loadStartPage()
+            $.confirm({
+                title: 'Are you sure?',
+                content: 'Do you want to exit the current game?',
+                icon: 'fa fa-question-circle',
+                animation: 'scale',
+                closeAnimation: 'scale',
+                opacity: 0.5,
+                buttons: {
+                    'confirm': {
+                        text: 'yes',
+                        btnClass: 'btn-blue',
+                        action: ()=>{
+                            this.status = "NOT_STARTED";
+                            this.loadStartPage();
+                        }
+                    },
+                    cancel: function(){
+                        
+                    }
+                }
+            });
+        } else this.loadStartPage()
                 
     }
 
     loadStartPage(){
-        // -- chek if the na is loaded in localstorage
-        // -- if true check if they need change
-        menu.acivateMenu();
-        objScore.readPositions()
+        $("#start-page").show();
+        $("#board-page").hide();
+        this.menu.acivateMenu();
+        this.score.readPositions();
+        if(this.player.checkName(false))
+            this.player.showName();
     }
 
     play(){
-        
-        // check if exist a name player
-
-        this.status = "STARTED";
+        this.player.setName();
+        if(this.player.checkName(true)) {
+            this.status = "STARTED";
+            this.board.loadBoard();
+        }
     }
 
 }

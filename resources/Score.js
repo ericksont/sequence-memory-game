@@ -1,7 +1,14 @@
 class Score {
+
+    memoryGame;
+
+    constructor(memoryGame){
+        this.memoryGame = memoryGame;
+    }
+
     readPositions(){
         $.getJSON('/data/score.json', result => {
-            let levelList = result[memoryGame.level].sort((a,b)=>b.score-a.score);
+            let levelList = result[this.memoryGame.level].sort((a,b)=>b.score-a.score);
             let html = '';
             let position = 1;
             levelList.forEach(data=>{
@@ -22,5 +29,3 @@ class Score {
                 </div>`;
     }
 }
-
-const objScore = new Score();

@@ -1,25 +1,37 @@
 class Menu {
 
-    constructor(){
+    memoryGame;
+
+    constructor(memoryGame){
+        this.memoryGame = memoryGame;
         this.events();
     }
 
     events(){
-        $("#menu-easy").on("click",() => memoryGame.start("EASY") );
-        $("#menu-medium").on("click",()=> memoryGame.start("MEDIUM") );
-        $("#menu-hard").on("click",()=> memoryGame.start("HARD") );
-        $("#start-game").on("click",()=> memoryGame.play() );
+        $("#menu-easy").on("click",() => {
+            if(this.memoryGame.level !== "EASY")
+                this.memoryGame.start("EASY") 
+        });
+        $("#menu-medium").on("click",()=> { 
+            if(this.memoryGame.level !== "MEDIUM")
+                this.memoryGame.start("MEDIUM"); 
+        });
+        $("#menu-hard").on("click",()=> {
+            if(this.memoryGame.level !== "HARD")
+                this.memoryGame.start("HARD"); 
+        });
+        $("#start-game").on("click",()=> this.memoryGame.play() );
+        $("#player button").on("click",()=> this.memoryGame.player.showField() );
     }
 
     acivateMenu(){
+        
         $(".nav-link").each((key, obj)=>{
             $(obj).addClass('link-dark');
             $(obj).removeClass('active');
         });
 
-        $(`#menu-${memoryGame.level.toLowerCase()}`).addClass('active');
+        $(`#menu-${this.memoryGame.level.toLowerCase()}`).addClass('active');
     }
 
 }
-
-const menu = new Menu();

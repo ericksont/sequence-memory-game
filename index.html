@@ -11,6 +11,7 @@
         <title> Memory Game </title>
 
         <link rel="stylesheet" href="/assets/bootstrap-5.0.2/bootstrap.min.css" >
+        <link rel="stylesheet" href="/assets/jquery-confirm/jquery-confirm.css" >
         <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css" >
 
         <link rel="stylesheet" href="/assets/css/style.css">
@@ -58,18 +59,33 @@
                     </div>
                 </div>
                 <div class="col-9 p-3">
-                    <div class="p-5 rounded">
+                    <div class="p-5">
                         <h1>MEMORY GAME</h1>
-                        <p class="lead">Test your ability to memorize on three different levels and make your mark in our ranking.</p>
-                        <p class="lead">Have a lot of fun.</p>
 
-                        <input type="text" id="name" class="form-control" placeholder="Put Your Name*" />
-                        <h3> ERICKSON TAVARES </h3>
-                        <button class="btn btn-lg btn-warning">Change Name</button>
-
-                        <div class="row">
-                            <div class="col-12 text-center m-5">
-                                <a id="start-game" class="btn btn-lg btn-primary" href="javascript:void(0)" role="button" > Start Game </a>
+                        <div id="start-page">
+                            <p class="lead">Test your ability to memorize on three different levels and make your mark in our ranking.</p>
+                            <p class="lead">Have a lot of fun.</p>
+    
+                            <input type="text" id="name" class="form-control" placeholder="Put Your Name*" />
+                            <div id="player">
+                                <h3> </h3>
+                                <button class="btn btn-sm btn-warning">Change Name</button>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-12 text-center m-5">
+                                    <a id="start-game" class="btn btn-lg btn-primary" href="javascript:void(0)" role="button" > Start Game </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="board-page">
+                            
+                            <div class="container">
+                                <div class="row justify-content-between">
+                                    <div id="time" class="col-3"> <h3></h3> </div>
+                                    <div id="score" class="col-3"> <h3></h3> </div>
+                                </div>
+                                <div  id="board-colors" class="row justify-content-md-center align-items-center mt-5 pt-5" > </div>
                             </div>
                         </div>
                         
@@ -80,24 +96,17 @@
 
         </main>
 
-        
-
-        <div class="main-game" style="display:none;">
-            <div class="genius">
-                <div class="green"></div>
-                <div class="red"></div>
-                <div class="yellow"></div>
-                <div class="blue"></div>
-            </div>
-        </div>
-
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script src="/assets/bootstrap-5.0.2/bootstrap.bundle.js"></script>
+        <script src="/assets/jquery-confirm/jquery-confirm.js"></script>
         
         <script src="/assets/js/levels.js"></script>
         
         <script src="/resources/Menu.js"></script>
         <script src="/resources/Score.js"></script>
+        <script src="/resources/Player.js"></script>
+        <script src="/resources/Board.js"></script>
+        <script src="/resources/Card.js"></script>
         <script src="/resources/MemoryGame.js"></script>
 
     </body>
