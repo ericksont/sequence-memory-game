@@ -1,14 +1,50 @@
 {
     "EASY": [{
         "name": "Erickson",
-        "score": 10
+        "score": 9
+    },{
+        "name": "Arthur de Sousa",
+        "score": 7
+    },{
+        "name": "Silvia Patricia",
+        "score": 5
+    },{
+        "name": "Helena",
+        "score": 7
+    },{
+        "name": "Hulk",
+        "score": 3
     }],
     "MEDIUM": [{
-        "name": "Erickson 02",
-        "score": 10
+        "name": "Erickson",
+        "score": 6
     },{
-        "name": "Erickson 02",
-        "score": 10
+        "name": "Arthur de Sousa",
+        "score": 1
+    },{
+        "name": "Silvia Patricia",
+        "score": 3
+    },{
+        "name": "Helena",
+        "score": 7
+    },{
+        "name": "Hulk",
+        "score": 2
     }],
-    "HARD" : []
+    "HARD" : [{
+        "name": "Erickson",
+        "score": 2
+    },{
+        "name": "Arthur de Sousa",
+        "score": 6
+    },{
+        "name": "Silvia Patricia",
+        "score": 1
+    },{
+        "name": "Helena",
+        "score": 2
+    },{
+        "name": "Hulk",
+        "score": 0
+    }]
 }

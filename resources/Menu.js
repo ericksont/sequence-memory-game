@@ -5,43 +5,19 @@ class Menu {
     }
 
     events(){
-        $("#menu-easy").on("click",(event)=>{
-            this.acivateMenu(event.currentTarget);
-            
-        });
-
-        $("#menu-medium").on("click",(event)=>{
-            this.acivateMenu(event.currentTarget);
-            
-        });
-
-        $("#menu-hard").on("click",(event)=>{
-            this.acivateMenu(event.currentTarget);
-            
-        });
-
-        $("#start-game").on("click",(event)=>{
-            
-            const name = $("#id").val();
-
-            if(memoryGame.status === "STARTED"){
-                //$.confirm();
-            } else {
-                memoryGame.start();
-            }
-            
-            
-        });
-
+        $("#menu-easy").on("click",() => memoryGame.start("EASY") );
+        $("#menu-medium").on("click",()=> memoryGame.start("MEDIUM") );
+        $("#menu-hard").on("click",()=> memoryGame.start("HARD") );
+        $("#start-game").on("click",()=> memoryGame.play() );
     }
 
-    acivateMenu(obj){
+    acivateMenu(){
         $(".nav-link").each((key, obj)=>{
             $(obj).addClass('link-dark');
             $(obj).removeClass('active');
         });
 
-        $(obj).addClass('active');
+        $(`#menu-${memoryGame.level.toLowerCase()}`).addClass('active');
     }
 
 }
