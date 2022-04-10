@@ -40,7 +40,8 @@ class MemoryGame {
         memoryGame.currentStatus = "NOT_STARTED";
         memoryGame.player.score = 0;
         memoryGame.board.sequence = [];
-        memoryGame.startPage.load()
+        memoryGame.startPage.load();
+        memoryGame.score.readPositions();
     }
 
 }
