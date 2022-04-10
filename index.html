@@ -20,10 +20,10 @@
     <body class="bg-light">
 
         <main >
-
             <div class="row">
                 <div class="col-3">
                     <div class="container">
+
                         <a href="/" class="align-items-center link-dark text-decoration-none">
                             <i class="fa-solid fa-colon" class="blue"></i>
                             <i class="fa-solid fa-colon" class="blue"></i>
@@ -31,63 +31,18 @@
                         </a>
 
                         <hr>
-                        <ul class="nav nav-pills flex-column">
-                            <li class="nav-item">
-                                <a id="menu-easy" href="javascript:void(0)" class="nav-link active" >
-                                    <i class="fa-thin fa-egg"></i>
-                                    Easy
-                                </a>
-                            </li>
-                            <li>
-                                <a id="menu-medium" href="javascript:void(0)" class="nav-link link-dark">
-                                    <i class="fa-thin fa-hand"></i>
-                                    Medium
-                                </a>
-                            </li>
-                            <li>
-                                <a id="menu-hard" href="javascript:void(0)" class="nav-link link-dark">
-                                    <i class="fa-thin fa-face-hand-peeking"></i>
-                                    Hard
-                                </a>
-                            </li>
-                        </ul>
+                        <ul id="menu-levels" class="nav nav-pills flex-column"></ul>
 
                         <hr>
-                        <div id="score" class="list-group list-group-flush border-bottom ">
-                            
-                        </div>
+                        <div id="score" class="list-group list-group-flush border-bottom "> </div>
+
                     </div>
                 </div>
-                <div class="col-9 p-3">
+                <div class="col-9">
                     <div class="p-5">
                         <h1>MEMORY GAME</h1>
 
-                        <div id="start-page">
-                            <p class="lead">Test your ability to memorize on three different levels and make your mark in our ranking.</p>
-                            <p class="lead">Have a lot of fun.</p>
-    
-                            <input type="text" id="name" class="form-control" placeholder="Put Your Name*" />
-                            <div id="player">
-                                <h3> </h3>
-                                <button class="btn btn-sm btn-warning">Change Name</button>
-                            </div>
-    
-                            <div class="row">
-                                <div class="col-12 text-center m-5">
-                                    <a id="start-game" class="btn btn-lg btn-primary" href="javascript:void(0)" role="button" > Start Game </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="board-page">
-                            
-                            <div class="container">
-                                <div class="row justify-content-between">
-                                    <div id="time" class="col-3"> <h3></h3> </div>
-                                    <div id="score" class="col-3"> <h3></h3> </div>
-                                </div>
-                                <div  id="board-colors" class="row justify-content-md-center align-items-center mt-5 pt-5" > </div>
-                            </div>
-                        </div>
+                        <div id="content" class="container pt-5"></div>
                         
                     </div>
                     
@@ -102,11 +57,15 @@
         
         <script src="/assets/js/levels.js"></script>
         
+        <script src="/resources/Message.js"></script>
         <script src="/resources/Menu.js"></script>
         <script src="/resources/Score.js"></script>
+        <script src="/resources/StartPage.js"></script>
         <script src="/resources/Player.js"></script>
         <script src="/resources/Board.js"></script>
+        <script src="/resources/Time.js"></script>
         <script src="/resources/Card.js"></script>
+
         <script src="/resources/MemoryGame.js"></script>
 
     </body>

@@ -1,10 +1,12 @@
-#player, #board-page, .close {
+#player, .close {
     display: none;
 }
 
 #board-colors {
     height: 300px;
 }
+
+.nav-link {cursor:pointer;}
 
 #blue   { cursor:pointer; background-color: blue; }
 #red    { cursor:pointer; background-color: red; }

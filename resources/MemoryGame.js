@@ -1,64 +1,41 @@
 class MemoryGame {
 
-    level = "EASY"; // EASY, MEDIUM, HARD
-    status = "NOT_STARTED"; // STARTED, NOT_STARTED
-
-    cards = ["blue","red", "green", "yellow", "purple", "orange","pink","gray","cyan"];
-
-    sequence = [];
-
+    currentLevel = "EASY"; // EASY, MEDIUM, HARD
+    currentStatus = "NOT_STARTED"; // STARTED, NOT_STARTED
+    
     menu = new Menu(this);
-    player = new Player(this);
     score = new Score(this);
+    player = new Player();
+    startPage = new StartPage(this);
     board = new Board(this);
 
-    constructor(){
-        this.start();
-    }
+    playGame(){
+        if(this.player.name === '' && $("#name").val() === '') 
+            Message.alert("Warning!", "Fill out player name", "fa fa-warning")
+        else {
 
-    start(level = "EASY"){
-        this.level = level;
-        if(this.status === "STARTED"){
-            $.confirm({
-                title: 'Are you sure?',
-                content: 'Do you want to exit the current game?',
-                icon: 'fa fa-question-circle',
-                animation: 'scale',
-                closeAnimation: 'scale',
-                opacity: 0.5,
-                buttons: {
-                    'confirm': {
-                        text: 'yes',
-                        btnClass: 'btn-blue',
-                        action: ()=>{
-                            this.status = "NOT_STARTED";
-                            this.loadStartPage();
-                        }
-                    },
-                    cancel: function(){
-                        
-                    }
-                }
-            });
-        } else this.loadStartPage()
-                
-    }
+            this.cleanGame();
 
-    loadStartPage(){
-        $("#start-page").show();
-        $("#board-page").hide();
-        this.menu.acivateMenu();
-        this.score.readPositions();
-        if(this.player.checkName(false))
-            this.player.showName();
-    }
+            this.currentStatus = "STARTED";
+            
+            if($("#name").val() !== '')
+                this.player.name = $("#name").val();
 
-    play(){
-        this.player.setName();
-        if(this.player.checkName(true)) {
-            this.status = "STARTED";
-            this.board.loadBoard();
+            this.board.load();
+            
         }
+    }
+
+    gameOver() {
+        this.board.time.stopTime();
+        Message.alert("Finished!", `Your score is <b>${this.player.score}</b>.`, "fa-solid fa-hands-clapping", this.cleanGame)
+    }
+
+    cleanGame(){
+        memoryGame.currentStatus = "NOT_STARTED";
+        memoryGame.player.score = 0;
+        memoryGame.board.sequence = [];
+        memoryGame.startPage.load()
     }
 
 }
