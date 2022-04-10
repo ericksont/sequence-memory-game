@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+var bodyParser = require('body-parser')
 
 const port = process.env.PORT || 3000;
 
@@ -12,12 +13,13 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
 });
 
-app.get('/updatescore/:lvl/:name/:score', function(req, res) {
-    const level = req.params.lvl;
-    const name = req.params.name;
-    const playesScore = req.params.score;
+app.use(bodyParser.json())
 
-    const newScore = [];
+app.post('/updatescore', (req, res) => {
+    
+    const level = req.body.level;
+    const name = req.body.name;
+    const playesScore = req.body.score;
 
     const rawdata = fs.readFileSync('data/score.json');
     const scoreData = JSON.parse(rawdata);
@@ -30,14 +32,11 @@ app.get('/updatescore/:lvl/:name/:score', function(req, res) {
             return;
         }
     });
-
     scoreData[level] = levelList;
 
     fs.writeFileSync('data/score.json', JSON.stringify(scoreData));
-
-    console.log(scoreData);
     
-    res.send('Reading JSON FILE');
+    res.send('UPDATE JSON FILE');
 });
 
 app.listen(port);

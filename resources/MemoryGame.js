@@ -28,7 +28,11 @@ class MemoryGame {
 
     gameOver() {
         this.board.time.stopTime();
-        fetch('');
+        fetch(`/updatescore/`,{
+            method: "POST",
+            headers: { "Content-Type" : "application/json" },
+            body: JSON.stringify({level: this.currentLevel, name: this.player.name, score: this.player.score})
+        });
         Message.alert("Finished!", `Your score is <b>${this.player.score}</b>.`, "fa-solid fa-hands-clapping", this.cleanGame)
     }
 
