@@ -28,6 +28,7 @@ class MemoryGame {
 
     gameOver() {
         this.board.time.stopTime();
+        fetch('');
         Message.alert("Finished!", `Your score is <b>${this.player.score}</b>.`, "fa-solid fa-hands-clapping", this.cleanGame)
     }
 
