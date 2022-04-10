@@ -6,6 +6,8 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/ericksont/sequence-memory-game?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/ericksont/sequence-memory-game?style=for-the-badge)
 
+<img src="/assets/images/image.png" alt="Imagem com modelo do jogo">
+
 > Memory game where the player needs to remember a sequence of colors.
 
 ## 💻 Requirements
